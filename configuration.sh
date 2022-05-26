@@ -5,7 +5,7 @@ use_wipefs_all="true"       # use wipefs --all
 use_zero_disks="false"      # use dd if=/dev/zero ...
 install_arguments=""        # any extra arguments to nixos-install, like --no-root-passwd
 zfs_pool_name="rpool"
-zfs_pool_disks=("/dev/nvme0n1" "/dev/sdb") # Note: using /dev/disk/by-id is also preferable.
+zfs_pool_disks=("/dev/nvme0n1" "/dev/sda") # Note: using /dev/disk/by-id is also preferable.
 zfs_pool_type="mirror"            # use "" for single, or "mirror", "raidz1", etc.
 zfs_encrypt_home="true"    # only set to true if you are using a nixos ISO with ZFS 0.8 or higher.
 zfs_auto_snapshot=("$zfs_pool_name/HOME" "$zfs_pool_name/ROOT") # datasets to be set with com.sun:auto-snapshot=true
